@@ -14,7 +14,7 @@ import argparse
 from datetime import datetime, timedelta
 import os
 
-def changeExifDate(directory):
+def renameFiles(directory):
     # Iterate over all the JPG files in the directory
     for filename in os.listdir(directory):
         filename = filename.lower()
@@ -58,4 +58,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Call the sub function to change the exif date for each JPG file in the directory
-    changeExifDate(args.directory)
+    renameFiles(args.directory)
